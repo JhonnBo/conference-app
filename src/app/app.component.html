@@ -1,0 +1,32 @@
+<header class="primary-header container group">
+    <h1 class="logo">
+        <a href="index.html">Міжнародна<br>Конференція</a>
+    </h1>
+    <h3 class="tagline">2&ndash;3 червня &mdash; ХНТУ, Херсон, Україна</h3>
+    <nav class="nav primary-nav">
+        <ul class="ul-nav-600">
+            <li><a routerLink="/main" [routerLinkActive]="['activ-menu']">Головна</a></li>
+            <li><a routerLink = "/direction" [routerLinkActive]="['activ-menu']">Тематика</a></li>
+            <li><a routerLink = "/shedule" [routerLinkActive]="['activ-menu']">Розклад</a></li>
+            <li><a routerLink = "/venue" [routerLinkActive]="['activ-menu']">Місце проведення</a></li>
+            <li><a routerLink = "/register" [routerLinkActive]="['activ-menu']">Реєстрація</a></li>
+        </ul>
+    </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+
+<footer class="primary-footer container group">
+    <small> &copy; кафедра ЕК та УП ХНТУ &nbsp;&nbsp;&nbsp;&nbsp;&copy; <a href="http://learn.shayhowe.com/"
+            target="_blank">Shay Howe</a></small>
+    <nav class="nav">
+        <ul>
+            <li><a routerLink="/main" [routerLinkActive]="['activ-menu']">Головна</a></li>
+            <li><a routerLink = "/direction" [routerLinkActive]="['activ-menu']">Тематика</a></li>
+            <li><a routerLink = "/shedule" [routerLinkActive]="['activ-menu']">Розклад</a></li>
+            <li><a routerLink = "/venue" [routerLinkActive]="['activ-menu']">Місце проведення</a></li>
+            <li><a routerLink = "/register" [routerLinkActive]="['activ-menu']">Реєстрація</a></li>
+        </ul>
+    </nav>
+</footer>

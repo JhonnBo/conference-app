@@ -1,0 +1,17 @@
+<section class="row-alt">
+    <div class="lead container">
+        <h1>Тематика конференції</h1>
+        <p>
+            Тематика конференції охоплює широкий діапазон
+            актуальних проблем сучасних технологій у всіх сферах суспільного життя. Науковий прогрес і технологічний
+            розвиток сприяє формуванню нового інформаційно-технологічного, економічного мислення та нових наукових
+            розробок.
+        </p>
+    </div>
+</section>
+<section class="row">
+    <div class="grid" *ngFor="let data of d_d">
+        <app-direction-block [direction_data]="data"></app-direction-block>
+    </div>
+
+</section>

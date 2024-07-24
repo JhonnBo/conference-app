@@ -1,0 +1,6 @@
+input.ng-touched.ng-invalid {border-color: red;}
+.bg-diabled {background-color: lightgray;}
+
+table {
+    margin-bottom: 0px;
+}

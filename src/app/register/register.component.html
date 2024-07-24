@@ -1,0 +1,112 @@
+<section class="row-alt">
+    <div class=" lead container">
+        <h1>Реєстрація</h1>
+        <p>
+            Для участі в конференції необхідно до встановленого терміну подати матеріали згідно вимог. Робочі мови
+            конференції: українська, російська, англійська. Планується видання матеріалів конференції.
+        </p>
+    </div>
+</section>
+<section class="row">
+    <div class="grid">
+        <section class="col-2-3">
+            <h2>Подай заявку на участь у конференції</h2>
+            <h5>Вартість паперового видання 300 грн.</h5>
+
+            <p>
+                Скористайтесь формою праворуч для реістрації.
+                Заочна участь у конференції із отриманням електронного варіанта збірника (.pdf формат) становить – 100
+                грн. Вартість паперового видання збірника - 300 грн. (плюс витрати на поштову доставку).
+                Рахунок оплати буде вказаний після представлення матеріалів. При оплаті необхідно обов'язково вказати
+                Прізвище, Ім'я, По-батькові учасника конференції.
+
+            </p>
+
+            <h4>Навіщо брати участь?</h4>
+
+            <ul class="why-attend">
+                <li>Можливість бути в курсі актуальних наукових і практичних проблем, не займаючись при цьому
+                    безпосередньо наукою або вузької практикою.</li>
+                <li>Спосіб самому спробувати «обкатати» свою ідею, обговорити її з професіоналами, побачити «слабкі»
+                    моменти, які потрібно ще доопрацювати.</li>
+                <li>Поштовх особистісного росту, розвиває лідерські якості, вміння виступати на публіці і вести
+                    дискусію.</li>
+                <li>Це напрацювання зв'язків у професійному середовищі.</li>
+            </ul>
+        </section><!--
+	-->
+        <!-- <form class="col-1-3" action="" method="post">
+            <fieldset class="register-group">
+                <label>
+                    Ім'я
+                    <input type="text" name="name" placeholder="Повне ім'я" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="Електронна адреса" required>
+                </label>
+                <label>
+                    Кількість примірників
+                    <select name="quantity" required>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </label>
+                <label>
+                    Комментарі
+                    <textarea name="comments"></textarea>
+                </label>
+            </fieldset>
+
+            <div class="fbtn"><input class="btn btn-default" type="submit" name="" value="Зареєструватися"></div>
+        </form> -->
+        <form [formGroup]="myForm" novalidate (ngSubmit)="submit()" class="col-1-3 register-group">
+            <label>Ім'я</label>
+            <input name="name" formControlName="userName" placeholder="Повне ім'я" />
+            <label>E-mail</label>
+            <input name="email" formControlName="userEmail" placeholder="Електронна адреса" />
+            <select name="quantity" formControlName="userCount">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <label>Коментар</label>
+            <textarea name="comment" formControlName="userComment" placeholder="Коментар (не обов'язково)"></textarea>
+            <div class="fbtn">
+                <button class="btn btn-default" [class.bg-diabled]="myForm.invalid">Зареєструватися</button>
+            </div>
+        </form>
+    </div>
+</section>
+<section class="row row-reg">
+    <div class="container">
+        <table class="registed">
+            <caption>Список зареєстрованих учасників конференції</caption>
+            <thead>
+                <tr>
+                    <th scope="col">
+                        Ім'я учасника
+                    </th>
+                    <th scope="col">
+                        E-mail учасника
+                    </th>
+                    <th scope="col">
+                        Кількість <br>
+                        примірників
+                    </th>
+                    <th scope="col">
+                        Коментар <br>
+                        від учасника
+                    </th>
+                </tr>
+            </thead>
+        </table>
+
+        <div *ngFor="let data of oders" >
+            <app-reg-result [order_data]="data"></app-reg-result>
+        </div>

@@ -1,0 +1,13 @@
+<section class="hero container">
+    <h2> Шановні колеги!</h2>
+    <p> Запрошуємо вас взяти участь у V Міжнародній науково-практичній конференції молодих вчених та студентів «Молодь у
+        світі сучасних технологій», за тематикою «Методологічні аспекти управління проектами розвитку регіону». </p>
+    <a class="btn btn-alt" routerLink="/register">Зареєструватися зараз</a>
+</section>
+<section class="row" >   
+    <div class="flex-grid">
+        <section class=" teaser col-1-3" *ngFor="let data of d_m">
+        <app-main-teaser-block [teaser_data] = data></app-main-teaser-block>
+    </section>
+    </div>
+</section>
