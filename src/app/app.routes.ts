@@ -7,10 +7,11 @@ import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
     // { path: 'main', component: MainComponent },
-    { path: 'main', component: MainComponent },
-    { path: '', redirectTo: "/main", pathMatch:"full" },
+    { path: '', component: MainComponent  },
+    { path: 'main', component: MainComponent },    
     { path: 'direction', component: DirectionComponent },
     { path: 'shedule', component: SheduleComponent },
     { path: 'venue', component: VenueComponent },
-    { path: 'register', component: RegisterComponent }
+    { path: 'register', component: RegisterComponent },
+    { path: '**', component: MainComponent  }
 ];
